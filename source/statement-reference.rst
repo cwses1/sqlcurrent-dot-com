@@ -31,6 +31,8 @@ Statement Reference
 * :ref:`recreate-server-statement`
 * :ref:`recreate-servers-statement`
 * :ref:`revert-config-statement`
+* :ref:`revert-database-statement`
+* :ref:`revert-databases-statement`
 * :ref:`server-statement`
 * :ref:`solution-statement`
 * :ref:`update-database-statement`

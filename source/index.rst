@@ -13,13 +13,13 @@ The above command updates every database in the QA environment to version 1.0.1 
 And all of your databases in the QA environment would go back to version 1.0.0, and you could troubleshoot the problem before trying to upgrade again.
 
 * :ref:`setup-section`
-* :ref:`getting-started-section`
-* :ref:`use-cases-section`
-* :ref:`examples-section`
+* :ref:`create-tutorial-section`
 * :ref:`concepts-section`
-* :ref:`language-guide-section`
 * :ref:`statement-reference`
-* :ref:`constraints-section`
-* :ref:`sqlcurrent-env-json-file-reference-section`
 * :ref:`license-section`
 * :ref:`credits-section`
+
+.. * :ref:`use-cases-section`
+.. * :ref:`examples-section`
+.. * :ref:`constraints-section`
+.. * :ref:`sqlcurrent-env-json-file-reference-section`

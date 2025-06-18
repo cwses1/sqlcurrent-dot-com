@@ -39,25 +39,53 @@ The purpose of a check is to verify that the database has the objects and/or dat
 A check script returns an error code and an error reason.  This makes it easy for the DBA.
 
 See also:
+
 * Error Code
 * Error Reason
 
 Check Script
 -----------------------
+A physical file containing database verification logic.  Typically, a check script will look for the existence of a table or column.
+
+A check script must return a result set that looks like this:
+
++-------------------+-------------------+
+| error_code        | error_reason      |
++-------------------+-------------------+
+| 100               | 'Missing a table' |
++-------------------+-------------------+
 
 See also:
+
 * Error Code
 * Error Reason
 
-
 Config
 -----------------------
+Custom script logic that is applied to a specific server or database.
+
+For example, you may want to configure the QA environment with a specific set of users for your application.
+
+::
+
+	apply config qa_users to databases where environment = qa;
 
 Create
 -----------------------
-The act of setting up or initialization a database or server for use.
+The act of setting up a database or server for use.
 Successful creation of a database implies the database is at 1.0.0.
 Successful creation of a server means that the server is configured correctly.
+
+The word "create" in this context can vary based on where your starting point is:
+
+* If the database does not exist then your create scripts must manage the physical setup of the database and the objects within.
+* If the database exists then your create scripts only need to manage the objects.
+* If the database exists and some of the objects already exist then your create scripts only need to manage the new objects.
+
+SQL Current supports all of these situations.
+
+Note that for a create operation you might not actually be creating anything - you might just be configuring the server or database.
+Instead, think of this as a setup and configuration step, especially in the case of servers.
 
 Create Database
 -----------------------
@@ -66,9 +94,8 @@ A created database can be updated.
 
 Create Server
 -----------------------
-The act of setting up a server using the :ref:`create-server-statement` ``create server`` or ``create servers`` statement.
+The act of setting up a server using the :ref:`create-server-statement` or :ref:`create-servers-statement` statement.
 Servers are not versioned.
-
 
 Connection String
 -----------------------
@@ -77,25 +104,27 @@ Different databases will use different connection strings.
 
 Database
 -----------------------
-
-A single server may contain several databases.
+Contains the schema objects that changes with time.
+Databases are versioned.
+SQL Current keeps track of each database version.
 
 Database Administrator
 -----------------------
 Whoever manages the database.
-
 This is commonly abbreviated as DBA.
 
 DBA
 -----------------------
-Database Administrator
+Whoever manages the database migrations.
+This is short for Database Administrator.
 
 Environment
 -----------------------
-Associates a server or a database with 
+Associates a server or a database with an isolated segment of your solution.
 
 Init
 -----------------------
+When you ``init`` a database or server, SQL Current will create the set of opinionated directories where it will look for scripts.
 
 Opinionated Path
 -----------------------
@@ -117,15 +146,37 @@ See also:
 
 Precheck Script
 -----------------------
+A physical file containing database verification logic.
+Typically, a precheck script will verify the conditions before an update is run against the database.  This is to avoid errors.
+
+A check script must return a result set that looks like this:
+
++-------------------+-------------------+
+| error_code        | error_reason      |
++-------------------+-------------------+
+| 100               | 'Missing a table' |
++-------------------+-------------------+
+
+See also:
+
+* Error Code
+* Error Reason
 
 Recreate
 -----------------------
+The act of resetting a database, then creating it.
+This destroys everything and "take you back to square one."
 
 Reset
 -----------------------
+The act of resetting a database.
+This destroys everything and leave your database in a state before it was created.
 
 Revert
 -----------------------
+The act of undoing a version update.
+You may need to revert an update due to a failed deployment.
+You can use the :ref:`revert-database-statement` or :ref:`revert-databases-statement` to do this.
 
 Server
 -----------------------
@@ -135,8 +186,8 @@ A single server may contain several databases.
 
 Solution
 -----------------------
-Associates topology constructs at an application level.
-An application may have several environments.
+Groups topology constructs at an application or project level.
+A solution may span several environments.
 
 Standalone Database
 -----------------------
