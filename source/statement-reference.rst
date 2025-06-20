@@ -4,6 +4,7 @@ Statement Reference
 ------------------------------------------------------------------------------------------------------------------------------
 * :ref:`apply-config-statement`
 * :ref:`branch-statement`
+* :ref:`check-config-statement`
 * :ref:`check-database-statement`
 * :ref:`check-databases-statement`
 * :ref:`check-server-statement`
