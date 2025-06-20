@@ -19,6 +19,7 @@ And all of your databases in the QA environment would go back to version 1.0.0, 
 * :ref:`license-section`
 * :ref:`credits-section`
 * :ref:`todo-section`
+* :ref:`check-script-details`
 
 .. * :ref:`use-cases-section`
 .. * :ref:`examples-section`
