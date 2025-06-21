@@ -1,21 +1,34 @@
 .. _statement-reference:
 
 Statement Reference
-------------------------------------------------------------------------------------------------------------------------------
-* :ref:`apply-config-statement`
+==========================
+
+Definition Statements
+-------------------------
+Use these statements to define your database topology.
+
 * :ref:`branch-statement`
+* :ref:`config-statement`
+* :ref:`database-statement`
+* :ref:`environment-statement`
+* :ref:`server-statement`
+* :ref:`solution-statement`
+* :ref:`version-statement`
+
+Command Statements
+-------------------------
+Use these statements to manipulate your database infrastructure:
+
+* :ref:`apply-config-statement`
 * :ref:`check-config-statement`
 * :ref:`check-database-statement`
 * :ref:`check-databases-statement`
 * :ref:`check-server-statement`
 * :ref:`check-servers-statement`
-* :ref:`config-statement`
 * :ref:`create-database-statement`
 * :ref:`create-databases-statement`
 * :ref:`create-server-statement`
 * :ref:`create-servers-statement`
-* :ref:`database-statement`
-* :ref:`environment-statement`
 * :ref:`init-database-statement`
 * :ref:`init-databases-statement`
 * :ref:`precheck-config-statement`
@@ -34,8 +47,5 @@ Statement Reference
 * :ref:`revert-config-statement`
 * :ref:`revert-database-statement`
 * :ref:`revert-databases-statement`
-* :ref:`server-statement`
-* :ref:`solution-statement`
 * :ref:`update-database-statement`
 * :ref:`update-databases-statement`
-* :ref:`version-statement`

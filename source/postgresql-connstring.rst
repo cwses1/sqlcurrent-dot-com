@@ -1,6 +1,6 @@
-.. _sql-server-connstring:
+.. _postgresql-connstring:
 
-SQL Server Connection String
+PostgreSQL Connection String
 =================================
 
 Connection String Format
