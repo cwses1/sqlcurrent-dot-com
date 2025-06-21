@@ -27,6 +27,7 @@ And all of your databases in the QA environment would go back to version 1.0.0, 
 * :ref:`creating-databases`
 * :ref:`create-script-execution-order`
 * :ref:`planned-features`
+* :ref:`script-hints`
 
 .. * :ref:`use-cases-section`
 .. * :ref:`examples-section`
