@@ -20,6 +20,8 @@ And all of your databases in the QA environment would go back to version 1.0.0, 
 * :ref:`credits-section`
 * :ref:`todo-section`
 * :ref:`check-script-details`
+* :ref:`sql-server-notes`
+* :ref:`postgresql-notes`
 
 .. * :ref:`use-cases-section`
 .. * :ref:`examples-section`

@@ -2,11 +2,17 @@
 
 TO DO Documentation Ideas
 ========================================================================================================================
-* Managing Multiple Environments Case Study & Instructive Guide
-* SQL Server Cloud Database Project Case Study & Instructive Guide
+* Multiple Solutions Case Study
+* Multiple Environments Case Study
+* Cloud Application Case Study
 * Scientific Instrument Case Study
-* How Check & Precheck Scripts Work
-* How Database Create Works
-* SQL Server Specific
-* PostgreSQL Specific
+* Database Creation Notes Works
+* SQL Server Notes
+* PostgreSQL Notes
+* MongoDB Notes
+* InfluxDB Notes
 
+* SQL Server Connection String
+* PostgreSQL Connection String
+* MongoDB Connection String
+* InfluxDB Connection String
