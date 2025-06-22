@@ -1,17 +1,18 @@
 .. _todo-section:
 
-TO DO Documentation Ideas
+Upcoming Documentation
 ========================================================================================================================
-* Creating Databases
+Building an entire product is difficult.
+Documenting an entire product is more difficult.
+This is the documentation that is scheduled to be written.
+
 * Multiple Solutions Case Study
 * Multiple Environments Case Study
 * Cloud Application Case Study
 * Scientific Instrument Case Study
-* SQL Server Notes
-* PostgreSQL Notes
 * MongoDB Notes
-* InfluxDB Notes
-* SQL Server Connection String
-* PostgreSQL Connection String
 * MongoDB Connection String
+* InfluxDB Notes
 * InfluxDB Connection String
+* SOLR Notes
+* SOLR Connection String

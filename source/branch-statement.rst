@@ -1,6 +1,6 @@
 .. _branch-statement:
 
-``branch statement``
+``branch``
 ========================================================================================================================
 Defines a branch.
 A branch associates a database with versions.

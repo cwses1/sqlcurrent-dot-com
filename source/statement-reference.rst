@@ -15,9 +15,10 @@ Use these statements to define your database topology.
 * :ref:`solution-statement`
 * :ref:`version-statement`
 
+
 Command Statements
 -------------------------
-Use these statements to manipulate your database infrastructure:
+Use these statements to evolve your database topology:
 
 * :ref:`apply-config-statement`
 * :ref:`check-config-statement`

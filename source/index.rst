@@ -17,17 +17,17 @@ And all of your databases in the QA environment would go back to version 1.0.0, 
 * :ref:`concepts-section`
 * :ref:`statement-reference`
 * :ref:`license-section`
-* :ref:`credits-section`
-* :ref:`todo-section`
 * :ref:`check-script-details`
+* :ref:`creating-databases`
+* :ref:`create-script-execution-order`
+* :ref:`script-hints`
 * :ref:`sql-server-notes`
 * :ref:`sql-server-connstring`
 * :ref:`postgresql-notes`
 * :ref:`postgresql-connstring`
-* :ref:`creating-databases`
-* :ref:`create-script-execution-order`
 * :ref:`planned-features`
-* :ref:`script-hints`
+* :ref:`credits-section`
+* :ref:`todo-section`
 
 .. * :ref:`use-cases-section`
 .. * :ref:`examples-section`

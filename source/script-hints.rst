@@ -2,16 +2,16 @@
 
 Script Hints
 =================================
-A script hint tells SQL Current to use a a different connection string when running a specific script.
-This can be very useful for any operation that may require different credentials or parameters, such as create or reset.
+A script hint instructs SQL Current to use a different connection string when running a database script.
+This can be very useful for executing database scripts that require different credentials or parameters, such as create and reset scripts.
 
 Example
 ---------------------------------
-In the following example, when SQL Current runs the create script, it will use the ``connString`` of ``myserver``.
+When SQL Current runs the following create command, it will use the ``connString`` of ``myserver``.
 
 .. code-block:: none
 	:linenos:
-	:emphasize-lines: 11
+	:emphasize-lines: 4,11
 
 	server myserver
 	{
@@ -33,6 +33,8 @@ In the following example, when SQL Current runs the create script, it will use t
 
 	create database mydb;
 
+This is useful because the default connection string ``connString`` specifies the database, and if that database does not exist then any login to the server will fail.
+Use a script hint to avoid the problem.
 
 See Also
 ---------------------------------

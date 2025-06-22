@@ -1,6 +1,6 @@
 .. _check-database-statement:
 
-``check-database-statement``
+``check database``
 ========================================================================================================================
 Runs check scripts against the specified database.
 

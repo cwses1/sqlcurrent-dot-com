@@ -1,6 +1,6 @@
 .. _check-server-statement:
 
-``check-server-statement``
+``check server``
 ========================================================================================================================
 Runs check scripts against the specified server.
 
