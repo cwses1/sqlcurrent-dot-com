@@ -29,6 +29,7 @@ And all of your databases in the QA environment would go back to version 1.0.0, 
 * :ref:`credits-section`
 * :ref:`todo-section`
 * :ref:`opinionated-paths`
+* :ref:`connstring-concept`
 
 .. * :ref:`use-cases-section`
 .. * :ref:`examples-section`

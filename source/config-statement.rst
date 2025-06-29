@@ -73,8 +73,8 @@ Examples
 
 See Also
 -----------------
-:ref:`apply-config-statement`
-:ref:`check-config-statement`
-:ref:`precheck-config-statement`
-:ref:`revert-config-statement`
-:ref:`opinionated-paths`
+* :ref:`apply-config-statement`
+* :ref:`check-config-statement`
+* :ref:`precheck-config-statement`
+* :ref:`revert-config-statement`
+* :ref:`opinionated-paths`
