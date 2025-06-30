@@ -1,6 +1,6 @@
 .. _create-server-statement:
 
-``create server``
+``create server`` Statement
 ========================================================================================================================
 
 Executes the create scripts listed in the server definition. ::

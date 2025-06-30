@@ -1,11 +1,14 @@
-.. _environment-concept:
+.. _environments:
 
-Environment Concept
+Environments
 ========================================================================================================================
 An **environment** groups databases and servers into a single manageable unit. 
 In practice, an environment is one of several isolated areas in an application being developed.
 An environment can belong to one or more solutions.
 You can think of an environment as another subsection under your solution.
+
+SQL Current implicitly defines a ``default`` environment.
+Servers and databases that are defined with no ``environment`` property belong to the ``default`` environment.
 
 Examples
 -----------------

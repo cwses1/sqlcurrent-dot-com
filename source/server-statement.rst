@@ -1,6 +1,6 @@
 .. _server-statement:
 
-``server``
+``server`` Statement
 ========================================================================================================================
 Defines a server.
 
@@ -12,8 +12,14 @@ Defines a server.
 		create: 'create.sql';
 		dir: 'my_server';
 		driver: 'sqlserver';
+		environment: dev;
+		host: 'my_server.sqlcurrent.com';
 		reset: 'reset.sql' (serverConnString);
 	}
+
+See the following for more information:
+
+* :ref:`server-concept`
 
 ``connString``
 -----------------
@@ -48,6 +54,43 @@ The Python driver / adapter library to use to connect to the server.
 See the following for more information:
 
 * :ref:`drivers`
+
+``environment``
+-----------------
+The environment to which this server belongs.
+If this property is not specified then the server will belong to the implicitly-defined ``default`` environment.
+
+See the following for more information:
+
+* :ref:`environments`
+* :ref:`environment-statement`
+
+``host``
+-----------------
+The IP address or resolveable host name of the server.
+The ``host`` property may appear redundant since there is already a connection string (``connString``) property, but this is used for construction database connection strings for individual databases.
+
+.. code-block :: none
+
+	server my_server
+	{
+		host: 'my_server.sqlcurrent.com';
+	}
+
+	database my_db1
+	{
+		connString: 'server={{my_server.host}};database=my_db1;user';
+		...
+	}
+
+	database my_db2
+	{
+		connString: 'server={{my_server.host}};database=my_db2;user';
+		...
+	}
+
+In the above example both ``my_db1`` and ``my_db2`` use the ``host`` property of ``my_server`` in their respective connection string properties.
+If the location of ``my_server`` changes then you only need to update the ``host`` property of that server.
 
 ``reset``
 -----------------

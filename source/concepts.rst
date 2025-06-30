@@ -182,7 +182,7 @@ Server
 -----------------------
 A single server may contain several databases.
 
-.. _concept-solution:
+For more information about servers, see :ref:`server-concept`.
 
 Solution
 -----------------------
