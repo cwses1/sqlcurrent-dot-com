@@ -87,8 +87,6 @@ A special connection string
 
 You can use this property once.
 
-
-
 Examples
 -----------------------
 
@@ -105,6 +103,7 @@ Define a standalone PostgreSQL database
 	}
 
 For more information about working with PostgreSQL databases, see the following:
+
 * :ref:`postgresql-notes`
 * :ref:`postgresql-connstring`
 
@@ -121,6 +120,7 @@ Define a standalone SQL Server database
 	}
 
 For more information about working with SQL Server databases, see the following:
+
 * :ref:`sql-server-notes`
 * :ref:`sql-server-connstring`
 
@@ -148,6 +148,7 @@ Define a branched database
 	}
 
 For more information about working with branched databases, see the following:
+
+* :ref:`creating-databases`
 * :ref:`branch-concept`
 * :ref:`branch-statement`
-* :ref:`creating-databases`
