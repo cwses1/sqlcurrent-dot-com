@@ -1,16 +1,21 @@
-.. _servers:
+.. _server:
 
 Server
 ========================================================================================================================
 Represents an endpoint that hosts any number of databases.
-You connect to a server using a specific driver, which tells SQL Current which Python driver / adapter library to use.
-See :ref:`drivers` for more information.
+You connect to a server using a driver, which tells SQL Current which Python driver / adapter library to use.
 
 A server has a ``host`` property which can be referenced in a database connection string property (``connString``, ``serverConnString``).
 A server also has its own ``connString`` property for performing server operations that do not apply to any database.
 
 A server can contain any number of databases.
 You use the :ref:`server-statement` to define a server.
+
+For more information, see the following:
+
+* :ref:`drivers`
+* The ``driver``, ``connString``, and ``serverConnString`` properties in :ref:`server-statement`
+* :ref:`server-statement`
 
 Creating
 --------------
@@ -65,6 +70,8 @@ For more information see the following:
 Resetting
 --------------
 Resetting a server puts the server into a pre-create state.
+It effectively "undoes" whatever the create scripts do.
+If you follow this practice, you should be able to run a ``reset server``, then a ``create server`` statement against the same server without errors.
 
 To reset a server, you use the ``reset`` property to specify one or more server reset scripts.
 Then you reset the server using the :ref:`reset-server-statement` or the :ref:`reset-servers-statement`.
@@ -86,6 +93,23 @@ For more information see the following:
 * :ref:`server-statement`
 * :ref:`reset-server-statement`
 * :ref:`reset-servers-statement`
+
+Recreating
+--------------
+Recreating a server is a reset followed by a create.
+
+The following script:
+
+.. code-block :: none
+
+	recreate server my_server;
+
+is shorthand for, and will do the exact same thing as this script:
+
+.. code-block :: none
+
+	reset server my_server;
+	create server my_server;
 
 See Also
 --------------

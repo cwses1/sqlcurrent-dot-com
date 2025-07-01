@@ -182,7 +182,7 @@ Server
 -----------------------
 A single server may contain several databases.
 
-For more information about servers, see :ref:`server-concept`.
+For more information about servers, see :ref:`server`.
 
 Solution
 -----------------------
@@ -215,3 +215,8 @@ Version
 The state of a database such that it complies with the business requirements.
 A certain version of a database may have a table or specific data that previous versions don't have.
 Versions are semantic and follow the ``major.minor.patch`` pattern.
+
+For more information see the following:
+
+* :ref:`version`
+* :ref:`version-statement`
