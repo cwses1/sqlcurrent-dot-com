@@ -19,7 +19,9 @@ Defines a server.
 
 See the following for more information:
 
-* :ref:`server-concept`
+* :ref:`server`
+
+.. _server-statement-connString:
 
 ``connString``
 -----------------
@@ -27,7 +29,9 @@ The connection string to the server.
 
 See the following for more information:
 
-* :ref:`connstring-concept`
+* :ref:`connstring`
+
+.. _server-statement-create:
 
 ``create``
 -----------------
@@ -41,11 +45,15 @@ See the following for more information:
 * :ref:`create-server-statement`
 * :ref:`create-servers-statement`
 
+.. _server-statement-dir:
+
 ``dir``
 -----------------
 The directory that SQL Current starts in to find scripts.
 
 See :ref:`paths` for more information.
+
+.. _server-statement-driver:
 
 ``driver``
 -----------------
@@ -55,6 +63,8 @@ See the following for more information:
 
 * :ref:`drivers`
 
+.. _server-statement-environment:
+
 ``environment``
 -----------------
 The environment to which this server belongs.
@@ -62,8 +72,10 @@ If this property is not specified then the server will belong to the implicitly-
 
 See the following for more information:
 
-* :ref:`environments`
+* :ref:`environment`
 * :ref:`environment-statement`
+
+.. _server-statement-host:
 
 ``host``
 -----------------
@@ -91,6 +103,8 @@ The ``host`` property may appear redundant since there is already a connection s
 
 In the above example both ``my_db1`` and ``my_db2`` use the ``host`` property of ``my_server`` in their respective connection string properties.
 If the location of ``my_server`` changes then you only need to update the ``host`` property of that server.
+
+.. _server-statement-reset:
 
 ``reset``
 -----------------

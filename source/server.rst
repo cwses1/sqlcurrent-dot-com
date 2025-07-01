@@ -14,7 +14,7 @@ You use the :ref:`server-statement` to define a server.
 For more information, see the following:
 
 * :ref:`drivers`
-* The ``driver``, ``connString``, and ``serverConnString`` properties in :ref:`server-statement`
+* The :ref:`server-statement-driver`, ``connString``, and ``serverConnString`` properties in :ref:`server-statement`
 * :ref:`server-statement`
 
 Creating

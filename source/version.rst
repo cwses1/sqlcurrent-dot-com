@@ -2,15 +2,10 @@
 
 Version
 ========================================================================================================================
-Represents an endpoint that hosts any number of databases.
-You connect to a server using a specific driver, which tells SQL Current which Python driver / adapter library to use.
-See :ref:`drivers` for more information.
+A set of script
 
-A server has a ``host`` property which can be referenced in a database connection string property (``connString``, ``serverConnString``).
-A server also has its own ``connString`` property for performing server operations that do not apply to any database.
+A version always belongs to a branch.
 
-A server can contain any number of databases.
-You use the :ref:`server-statement` to define a server.
 
 Creating
 --------------

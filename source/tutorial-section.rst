@@ -1,65 +1,74 @@
-.. _create-tutorial-section:
+.. _tutorial-simplest:
 
-Create Tutorial
+Tutorial - Create Tables
 ===============================================
-In this tutorial, we start with an existing database and create the schema objects in it.
-
+In this tutorial, we create some new tables in a database.
 Before proceeding, ensure you've followed the steps in the :ref:`setup-section` section.
 
 Get a database running
 -----------------------
-This is the most difficult step.
-You need to get database server up and running.
-For this tutorial, also have a database created for that server using the server specific utilities.
+This is probably the most difficult step if it's not already done.
+Make sure you have a database server, such as PostgreSQL or SQL Server, up and running.
+Also have an empty database created that we can add new tables to.
+
 SQL Current also supports creating the physical database for servers that support it, but that is out of scope for this tutorial.
 
-Write a Current Script file
+Write the SQL file ``create.sql``
 -----------------------
-SQL Current's language is called **Current Script**.
-This current script defines a PostgreSQL database.
-It then *creates* the database by running the ``create.sql`` file.
+Write a PostgreSQL SQL script that creates a couple of tables and save it to ``create.sql``.
 
-::
+.. code-block :: sql
 
-	//
-	// DEFINE THE DATABASE.
-	//
-	database mydb
-	{
-		driver: 'postgres';
-		connString: 'host=127.0.0.1 port=5432 dbname=mydb user=postgres password=postgres';
-		create: './create.sql';
-	}
-
-	//
-	// CREATE THE DATABASE.
-	//
-	create database mydb;
-
-Save this script to ``script.txt``.
-When we run this script, SQL Current will execute the ``create.sql`` file.
-But first we must write the ``create.sql`` file which contains all of the DDL and DML we need to create the database objects.
-
-Write the ``create.sql`` file
------------------------
-
-::
-
-	create table sqlcurrent_record
+	create table table1
 	(
-		record_id int primary key
+		table1_id int primary key
 	);
 
+	create table table2
+	(
+		table2_id int primary key
+	);
 
-Run the Current Script
+Note that you could run the above script directly in ``psql`` or ``pgadmin`` without any changes.
+SQL Current does not invent any new language for modifying your databases.
+It uses the native language of the database (whatever appears in your SQL script, in this case), such as SQL, for doing everything.
+
+Write the SCS ``script.txt`` file
+-----------------------------
+SQL Current's language is called **SQL Current Script**, or **SCS** for short.
+Create the following SCS file ``script.txt`` and save it in the same directory as ``create.sql``.
+
+.. code-block :: none
+
+	database my_db
+	{
+		driver: 'psycopg';
+		connString: 'host=127.0.0.1 port=5432 dbname=my_db user=postgres password=postgres';
+		create: 'create.sql';
+		dir: '';
+	}
+
+	create database mydb;
+
+Here is what happens when you run the above SCS script:
+
+#. Database ``my_db`` is defined.
+#. SQL Current connects to the database server using the ``psycopg`` Python driver using the ``connString`` property.
+#. SQL Current looks for the ``create.sql`` file in the current directory, specified by the empty ``dir`` property.
+#. The text inside ``create.sql`` is sent to the server to create the new tables.
+#. SQL Current will report success or failure of the script you know what's going on.
+
+Run the SCS file 
 -----------------------
-Run the following command in your shell / console / terminal: ::
+Run the following command in your shell / console / terminal:
+
+.. code-block :: none
 
 	% sqlcurrent script.txt
 
 If there are no errors you should see output like this:
 
-::
+.. code-block :: none
 
 	mydb: Creating database.
 	mydb: Running '/Projects/Database_Migrations/create.sql'.
@@ -71,7 +80,7 @@ Verify the credentials are correct.
 SQL Current will print out any errors or exceptions to the terminal that it encounters.
 Here is an example of a failed script run from SQL Server:
 
-::
+.. code-block :: none
 
 	mydb: Creating database.
 	mydb: Running '/Projects/Database_Migrations/create.sql'.
@@ -83,7 +92,7 @@ Continue once you have received a success response.
 
 Verify the table was created
 -----------------------
-Use ``psql`` or pgadmin to verify the table was created in your database.
+Use ``psql`` or ``pgadmin`` to verify the table was created in your database.
 
 Verify the update tracking file was created
 -----------------------
@@ -95,7 +104,7 @@ Looks for directory ``sqlcurrent_updatingtracking`` and find the update tracking
 Verify the database version
 -----------------------
 
-::
+.. code-block :: none
 
 	select databases;
 

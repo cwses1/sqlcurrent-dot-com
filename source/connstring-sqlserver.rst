@@ -1,4 +1,4 @@
-.. _sql-server-connstring:
+.. _connstring-sqlserver:
 
 SQL Server Connection String
 =================================

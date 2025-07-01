@@ -4,7 +4,7 @@
 ========================================================================================================================
 Defines a branch.
 A branch associates a database with versions.
-For more information, see :ref:`branch-concept`.
+For more information, see :ref:`branch`.
 
 Syntax Overview
 -----------------

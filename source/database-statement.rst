@@ -40,19 +40,25 @@ If this property is used, it must reference a defined **branch** and you define 
 
 If this property is not used, you define a **standalone database**.
 
+.. _database-statement-connString:
+
 ``connString``
 -----------------------
 The connection string for this database.
 
-* :ref:`connstring-concept`
-* :ref:`postgresql-connstring`
-* :ref:`sql-server-connstring`
+* :ref:`connstring`
+* :ref:`connstring-postgresql`
+* :ref:`connstring-sqlserver`
+
+.. _database-statement-create:
 
 ``create``
 -----------------------
 The path to the reset file for this database.
 
 You can list this property several times.
+
+.. _database-statement-driver:
 
 ``driver``
 -----------------------
@@ -69,17 +75,23 @@ This also determines the style and format of the connection string (``connString
 
 For more information, see :ref:`drivers`.
 
+.. _database-statement-dir:
+
 ``dir``
 -----------------------
 The directory that contains scripts for this database.
 
 You can use this property once.
 
+.. _database-statement-reset:
+
 ``reset``
 -----------------------
 The path to the reset file for this database.
 
 You can list this property several times.
+
+.. _database-statement-serverConnString:
 
 ``serverConnString``
 -----------------------
@@ -105,7 +117,7 @@ Define a standalone PostgreSQL database
 For more information about working with PostgreSQL databases, see the following:
 
 * :ref:`postgresql-notes`
-* :ref:`postgresql-connstring`
+* :ref:`connstring-postgresql`
 
 Define a standalone SQL Server database
 *********************
@@ -121,8 +133,8 @@ Define a standalone SQL Server database
 
 For more information about working with SQL Server databases, see the following:
 
-* :ref:`sql-server-notes`
-* :ref:`sql-server-connstring`
+* :ref:`sqlserver-notes`
+* :ref:`connstring-sqlserver`
 
 Define a branched database
 *********************
@@ -149,6 +161,6 @@ Define a branched database
 
 For more information about working with branched databases, see the following:
 
-* :ref:`creating-databases`
-* :ref:`branch-concept`
+* :ref:`branch`
 * :ref:`branch-statement`
+* :ref:`creating-databases`

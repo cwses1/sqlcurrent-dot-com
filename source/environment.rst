@@ -1,6 +1,6 @@
-.. _environments:
+.. _environment:
 
-Environments
+Environment
 ========================================================================================================================
 An **environment** groups databases and servers into a single manageable unit. 
 In practice, an environment is one of several isolated areas in an application being developed.

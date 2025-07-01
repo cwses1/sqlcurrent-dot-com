@@ -1,4 +1,4 @@
-.. _postgresql-connstring:
+.. _connstring-postgresql:
 
 PostgreSQL Connection String
 =================================

@@ -1,4 +1,4 @@
-.. _sql-server-notes:
+.. _sqlserver-notes:
 
 SQL Server Notes
 =================================
@@ -77,7 +77,8 @@ Example 1.  Define a SQL Server database.
 
 See Also
 ---------------------------------
-* :ref:`sql-server-connstring`
+
 * :ref:`creating-databases`
 * :ref:`database-statement`
+* :ref:`connstring-sqlserver`
 * https://pymssql.readthedocs.io/en/latest/index.html
