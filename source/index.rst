@@ -13,23 +13,24 @@ The above command updates every database in the QA environment to version 1.0.1 
 And all of your databases in the QA environment would go back to version 1.0.0, and you could troubleshoot the problem before trying to upgrade again.
 
 * :ref:`setup-section`
-* :ref:`tutorial-simplest`
+* :ref:`tutorial-01`
+* :ref:`tutorial-02`
 * :ref:`concepts-section`
 * :ref:`statement-reference`
 * :ref:`license-section`
-* :ref:`check-script-details`
+* :ref:`check-script`
 * :ref:`creating-databases`
 * :ref:`create-script-execution-order`
 * :ref:`script-hints`
-* :ref:`sql-server-notes`
-* :ref:`sql-server-connstring`
+* :ref:`sqlserver-notes`
+* :ref:`connstring-sqlserver`
 * :ref:`postgresql-notes`
-* :ref:`postgresql-connstring`
+* :ref:`connstring-postgresql`
 * :ref:`planned-features`
 * :ref:`credits-section`
 * :ref:`todo-section`
 * :ref:`opinionated-paths`
-* :ref:`connstring-concept`
+* :ref:`connstring`
 
 .. * :ref:`use-cases-section`
 .. * :ref:`examples-section`

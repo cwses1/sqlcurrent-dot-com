@@ -1,6 +1,6 @@
-.. _check-scripts:
+.. _check-script:
 
-Check Scripts
+Check Script
 ========================================================================================================================
 A check script is something you write as the DBA to verify a create, update, or apply config operation completed successfully.
 There are two types of check scripts:
