@@ -30,8 +30,6 @@ Write a PostgreSQL SQL script that creates a couple of tables and save it to ``c
 	);
 
 Note that you could run the above script directly in ``psql`` or ``pgadmin`` without any changes.
-SQL Current does not invent any new language for modifying your databases.
-It uses the native language of the database (whatever appears in your SQL script, in this case), such as SQL, for doing everything.
 
 Write the SCS ``script.txt`` file
 -----------------------------
