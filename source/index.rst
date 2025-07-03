@@ -15,6 +15,9 @@ And all of your databases in the QA environment would go back to version 1.0.0, 
 * :ref:`setup-section`
 * :ref:`tutorial-01`
 * :ref:`tutorial-02`
+* :ref:`tutorial-03`
+* :ref:`tutorial-04`
+* :ref:`tutorial-05`
 * :ref:`concepts-section`
 * :ref:`statement-reference`
 * :ref:`license-section`
